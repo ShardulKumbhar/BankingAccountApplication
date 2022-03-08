@@ -1,57 +1,39 @@
 
-public class Main {
 
+public class Main {
+	
+	/**
+	 * Procedure:-
+	 * ==========
+	 * 1. Calling method of sub classes and passing arguments
+	 * 2. Printing all the instances
+	 */
+	int Speed;
+	double regularPrice;
+	String color; 
+	int year;
+	int manufacturerDiscount;
 	public static void main(String[] args) {
 
+		/*
+		 * 1. Calling method of sub classes and passing arguments
+		 */
+		Truck myTruck = new Truck(165,15000,"Blue",1800);
+		Ford myFord1 = new Ford (156,4452.0,"Black",2005, 10);
+		Ford myFord2 = new Ford (155,5000.0,"White",1998, 5);
+		Sedan mySedan = new Sedan(160, 20000, "Red", 10);
+		Car myCar = new Car (555, 56856.0, "Red");
 		
-		/**
-		 * PROCEDURE
-		 * =====================================
-		 * 1. Creating an Object 
-		 * 2.Printing a statement
-		 * 3.calling method into object1
-		 * 4.calling method into object1
-		 * 5.calling method into object1
-		 * 6.calling method into object2
-		 * 
-		 *===================================
+		System.out.println("******My Own Auto Shop*******");
+		/*
+		 * 2. Printing all the instances
 		 */
+		System.out.println("MyTruck Price: " +myTruck.getSalePrice());
+		System.out.println("MyFord1 Price: " +myFord1.getSalePrice());
+		System.out.println("MyFord2 Price: " +myFord2.getSalePrice());
+		System.out.println("MySedan Price: " +mySedan.getSalePrice());
+		System.out.println("MyCar Price: " +myCar.getSalePrice());
 		
-		System.out.println("Annual intrest rate is 4 ");
-
-		/*
-		 * 1. Creating an Object
-		 */
-		SavingAccount saver1 = new SavingAccount();
-		SavingAccount saver2 = new SavingAccount();
-
-		/*
-		 * 2.Printing a statement
-		 */
-		System.out.println("*********************Saver1********************");
-
-		/*
-		 * 3.calling method into object1
-		 */
-		saver1.calculateMonthlyInterest(2000, 4);
-		System.out.println("********************Saver2************************");
-
-		/*
-		 * 4.calling method into object1
-		 */
-		saver2.calculateMonthlyInterest(3000, 4);
-
-		System.out.println("\n Annual intrest rate is 5");
-		System.out.println("*********************Saver1*********************");
-		/*
-		 * 5.calling method into object1
-		 */
-		saver1.calculateMonthlyInterest(2000, 5);
-		System.out.println("********************Saver2************************");
-		/*
-		 * 6.calling method into object6
-		 */
-		saver2.calculateMonthlyInterest(3000, 5);
-	}
+		}
 
 }
